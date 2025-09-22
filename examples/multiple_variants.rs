@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 use egui::ViewportBuilder;
 use egui_phosphor::{bold, fill, light, regular, thin};
 
@@ -21,7 +23,7 @@ impl Demo {
 
         fonts.font_data.insert(
             "phosphor-thin".into(),
-            egui_phosphor::Variant::Thin.font_data(),
+            Arc::new(egui_phosphor::Variant::Thin.font_data()),
         );
         fonts.families.insert(
             egui::FontFamily::Name("phosphor-thin".into()),
@@ -30,7 +32,7 @@ impl Demo {
 
         fonts.font_data.insert(
             "phosphor-light".into(),
-            egui_phosphor::Variant::Light.font_data(),
+            Arc::new(egui_phosphor::Variant::Light.font_data()),
         );
         fonts.families.insert(
             egui::FontFamily::Name("phosphor-light".into()),
@@ -39,7 +41,7 @@ impl Demo {
 
         fonts.font_data.insert(
             "phosphor".into(),
-            egui_phosphor::Variant::Regular.font_data(),
+            Arc::new(egui_phosphor::Variant::Regular.font_data()),
         );
         fonts.families.insert(
             egui::FontFamily::Name("phosphor".into()),
@@ -48,7 +50,7 @@ impl Demo {
 
         fonts.font_data.insert(
             "phosphor-bold".into(),
-            egui_phosphor::Variant::Bold.font_data(),
+            Arc::new(egui_phosphor::Variant::Bold.font_data()),
         );
         fonts.families.insert(
             egui::FontFamily::Name("phosphor-bold".into()),
@@ -57,7 +59,7 @@ impl Demo {
 
         fonts.font_data.insert(
             "phosphor-fill".into(),
-            egui_phosphor::Variant::Fill.font_data(),
+            Arc::new(egui_phosphor::Variant::Fill.font_data()),
         );
         fonts.families.insert(
             egui::FontFamily::Name("phosphor-fill".into()),
